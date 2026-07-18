@@ -1,0 +1,36 @@
+export { defineAvalElement } from "./definition.js";
+export {
+  AVAL_ELEMENT_API_MAJOR,
+  AVAL_TAG_NAME,
+  type AvalAutoplay,
+  type AvalBindings,
+  type AvalCrossOrigin,
+  type AvalDiagnostics,
+  type AvalElement,
+  type AvalElementAttributes,
+  type AvalElementConstructor,
+  type AvalElementEventMap,
+  type AvalErrorDetail,
+  type AvalFallbackDetail,
+  type AvalFit,
+  type AvalMode,
+  type AvalMotion,
+  type AvalPrepareOptions,
+  type AvalPublicFailure,
+  type AvalReadinessChangeDetail,
+  type AvalRequestedStateChangeDetail,
+  type AvalRuntimeMediaCursor,
+  type AvalRuntimeTraceRecord,
+  type AvalSourceCandidate,
+  type AvalTransitionDetail,
+  type AvalUnderflowDetail,
+  type AvalVisualStateChangeDetail,
+  type Binding,
+  type RuntimeReadiness,
+  type RuntimeReadinessResult,
+  type StaticReason
+} from "./public-types.js";
+export {
+  AvalEnvironmentError,
+  AvalNotReadyError
+} from "./errors.js";
