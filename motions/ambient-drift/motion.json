@@ -1,0 +1,79 @@
+{
+  "projectVersion": "1.0",
+  "alpha": "packed",
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "fit": "contain",
+    "pixelAspect": [1, 1],
+    "colorSpace": "srgb"
+  },
+  "frameRate": { "numerator": 24, "denominator": 1 },
+  "sources": [
+    {
+      "id": "scene",
+      "type": "png-sequence",
+      "directory": "frames",
+      "prefix": "frame-",
+      "digits": 4,
+      "suffix": ".png",
+      "firstNumber": 0,
+      "frameCount": 72
+    }
+  ],
+  "encodings": [
+    {
+      "codec": "av1",
+      "bitDepth": 8,
+      "cpuUsed": 4,
+      "tiles": { "columns": 1, "rows": 1 },
+      "rowMt": true,
+      "threads": 8,
+      "renditions": [
+        { "id": "video.1x", "width": 512, "height": "auto", "crf": 30 }
+      ]
+    },
+    {
+      "codec": "vp9",
+      "deadline": "good",
+      "cpuUsed": 2,
+      "threads": 8,
+      "renditions": [
+        { "id": "video.1x", "width": 512, "height": "auto", "crf": 32 }
+      ]
+    },
+    {
+      "codec": "h265",
+      "preset": "slow",
+      "threads": 8,
+      "renditions": [
+        { "id": "video.1x", "width": 512, "height": "auto", "crf": 28 }
+      ]
+    },
+    {
+      "codec": "h264",
+      "preset": "slow",
+      "renditions": [
+        { "id": "video.1x", "width": 512, "height": "auto", "crf": 24 }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "loop.body",
+      "kind": "body",
+      "source": "scene",
+      "range": [0, 72],
+      "playback": "loop",
+      "ports": [
+        { "id": "default", "entryFrame": 0, "portalFrames": [0] }
+      ]
+    }
+  ],
+  "initialState": "idle",
+  "states": [
+    { "id": "idle", "bodyUnit": "loop.body" }
+  ],
+  "edges": [],
+  "bindings": []
+}
