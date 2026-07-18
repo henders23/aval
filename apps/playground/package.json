@@ -1,0 +1,18 @@
+{
+  "name": "@pixel-point/aval-playground",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build --config vite.production.config.ts",
+    "build:production": "vite build --config vite.production.config.ts",
+    "dev": "vite --host 127.0.0.1",
+    "preview:production": "vite preview --config vite.production.config.ts --host 127.0.0.1",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@pixel-point/aval-element": "1.0.0",
+    "@pixel-point/aval-format": "1.0.0",
+    "@pixel-point/aval-player-web": "1.0.0"
+  }
+}

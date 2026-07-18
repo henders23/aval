@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+artifacts/
+.cache/
+packages/*/temp/
+playwright-report/
+test-results/
+.playwright-cli/
+output/playwright/
+*.tsbuildinfo
+.DS_Store
